@@ -56,32 +56,32 @@ let winImage;
 let endScreenRepeatButton;
 
 function preload() {
-    this.load.image('sky', 'assets/sky3.png');
-    this.load.image('ground', 'assets/platform.png');
-    this.load.image('ground2', 'assets/platform2.png');
-    this.load.image('ground3', 'assets/platform3.png');
-    this.load.image('star', 'assets/star.png');
-    this.load.image('repeat', 'assets/repeat2.png');
-    this.load.image('soundOn', 'assets/soundOn.png');
-    this.load.image('soundOff', 'assets/soundOff.png');
-    this.load.image('musicOn', 'assets/musicOn.png');
-    this.load.image('musicOff', 'assets/musicOff.png');
-    this.load.image('btnPlay', 'assets/btPlay.png');
-    this.load.image('trap', 'assets/trap.png');
-    this.load.image('trap2', 'assets/trap2.png');
-    this.load.image('trap3', 'assets/trap3.png');
-    this.load.image('trap4', 'assets/trap4.png');
-    this.load.image('gameover', 'assets/gameover.png');
-    this.load.image('win', 'assets/win.png');
-    this.load.image('judul', 'assets/judul.png');
-    this.load.audio('bgm', 'assets/BGM.mp3');
-    this.load.audio('collect', 'assets/collect3.mp3');
-    this.load.audio('jump', 'assets/jump2.mp3');
-    this.load.audio('hitTrap', 'assets/hittrap.mp3');
-    this.load.audio('win', 'assets/win.mp3');
-    this.load.audio('lose', 'assets/lose.mp3');
+    this.load.image('sky', 'Assets/sky3.png');
+    this.load.image('ground', 'Assets/platform.png');
+    this.load.image('ground2', 'Assets/platform2.png');
+    this.load.image('ground3', 'Assets/platform3.png');
+    this.load.image('star', 'Assets/star.png');
+    this.load.image('repeat', 'Assets/repeat2.png');
+    this.load.image('soundOn', 'Assets/soundOn.png');
+    this.load.image('soundOff', 'Assets/soundOff.png');
+    this.load.image('musicOn', 'Assets/musicOn.png');
+    this.load.image('musicOff', 'Assets/musicOff.png');
+    this.load.image('btnPlay', 'Assets/btPlay.png');
+    this.load.image('trap', 'Assets/trap.png');
+    this.load.image('trap2', 'Assets/trap2.png');
+    this.load.image('trap3', 'Assets/trap3.png');
+    this.load.image('trap4', 'Assets/trap4.png');
+    this.load.image('gameover', 'Assets/gameover.png');
+    this.load.image('win', 'Assets/win.png');
+    this.load.image('judul', 'Assets/judul.png');
+    this.load.audio('bgm', 'Assets/BGM.mp3');
+    this.load.audio('collect', 'Assets/collect3.mp3');
+    this.load.audio('jump', 'Assets/jump2.mp3');
+    this.load.audio('hitTrap', 'Assets/hittrap.mp3');
+    this.load.audio('win', 'Assets/win.mp3');
+    this.load.audio('lose', 'Assets/lose.mp3');
 
-    this.load.spritesheet('dude', 'assets/dude2.png', {
+    this.load.spritesheet('dude', 'Assets/dude2.png', {
         frameWidth: 88,
         frameHeight: 89
     });
