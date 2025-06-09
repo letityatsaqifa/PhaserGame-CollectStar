@@ -43,11 +43,8 @@ let levelTraps = [];
 let levelText;
 let doubleJump = true;
 let gameStarted = false;
-
-// --- Variabel Baru ---
 let playButton;
-let gameTitle; // Variabel untuk judul game
-// --- Akhir Variabel Baru ---
+let gameTitle;
 
 let darkOverlay;
 let endScreenOverlay;
@@ -148,7 +145,6 @@ function create() {
             }
         });
     });
-
 
     this.platformGroup = this.physics.add.staticGroup();
     traps = this.physics.add.staticGroup();
@@ -405,7 +401,7 @@ function collectStar(player, star) {
     if (!gameStarted) return;
 
     star.disableBody(true, true);
-    score += 1;
+    score += 10;
     scoreText.setText('Score: ' + score);
 
     if (isSoundEnabled) collectSound.play();
@@ -485,45 +481,18 @@ function toggleSound() {
 }
 
 function restartGame() {
-    gameStarted = false;
+    gameStarted = false; 
+    this.physics.resume();
     score = 0;
     currentLevel = 1;
 
     hideEndScreen.call(this);
 
-    // Tampilkan kembali elemen layar awal
-    darkOverlay.setVisible(true);
-    
-    // Reset dan tampilkan kembali judul dan tombol play
-    gameTitle.setVisible(true).setAlpha(1);
-    playButton.setVisible(true).setAlpha(1).setScale(1); // Pastikan skala kembali normal
-
-    if (scoreText) scoreText.setVisible(false).setText('Score: ' + score);
-    if (levelText) levelText.setVisible(false);
-    if (musicButton) musicButton.setVisible(false);
-    if (soundButton) soundButton.setVisible(false);
-    if (repeatButton) repeatButton.setVisible(false);
-
-    if (player) {
-        player.body.setEnable(false);
-        player.setVisible(false);
-        player.clearTint();
-        player.setPosition(50, 450);
-        player.setVelocity(0,0);
-    }
-
-    if (stars) stars.clear(true, true);
-    if (traps) traps.clear(true, true);
-
-
     if (bgm && bgm.isPlaying) {
         bgm.stop();
     }
-    musicButton.setTexture(isMusicPlaying ? 'musicOn' : 'musicOff');
-    soundButton.setTexture(isSoundEnabled ? 'soundOn' : 'soundOff');
 
-    loadInitialAssets.call(this, currentLevel);
+    scoreText.setText('Score: ' + score);
 
-    this.physics.world.resume();
-    this.physics.pause();
+    startGame.call(this);
 }
